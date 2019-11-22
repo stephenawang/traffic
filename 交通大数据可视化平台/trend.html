@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交通大数据可视化平台</title>
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="scripts/Plugin/echarts.min.js"></script>
+    <script src="scripts/common.js"></script>
+    <script src="scripts/trend.js"></script>
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+  <div class="left nav">
+      <ul>
+          <li><i class="nav_1"></i><a href="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/1/index1_7月17.html">采集概况</a> </li>
+          <li><i class="nav_2"></i><a href="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/指标分析/市心路/市心北路_quota.html">指标分析</a> </li>
+          <li class="nav_active"><i class="nav_3"></i><a href="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/trend.html">趋势分析</a> </li>
+          </ul>
+  </div>
+    <div class="header_center left" style="position:relative">
+  
+        <h2><strong>交通大数据可视化平台</strong></h2>
+
+    </div>
+    <div class="right nav text_right">
+        <ul>
+        </ul>
+    </div>
+
+</header>
+<!--内容部分-->
+<!-- <div class="con left" style="width:50%;"> -->
+    <!--统计分析图-->
+    <div class="static_top left">
+            <i></i><span>统计分析一</span>
+        </div>
+        <div class="right div_any03">
+            <div class="div_any_child01 left">
+                <div class="div_any_title">各路段每天车辆速度</div>
+                <div id="echart1"  style="width: 100%;height: 310px;display: inline-block;"></div>
+                <div class="char_table"><div class="table_p table_p01">
+                    <table>
+                        <thead><tr>
+                            <th>排名</th>
+                            <th>路段名称</th>
+                            <th>平均速度（km/h）</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>1</td><td>市心北路</td><td>44.1258（km/h）</td></tr>
+                        <tr><td>2</td><td>通惠北路</td><td>43.5171（km/h）</td></tr>
+                        <tr><td>3</td><td>市心中路</td><td>38.5526（km/h）</td></tr>
+                        <tr><td>4</td><td>通惠中路</td><td>37.1260（km/h）</td></tr>
+                        <tr><td>5</td><td>通惠南路</td><td>36.3281（km/h）</td></tr>
+                        <tr><td>6</td><td>市心南路</td><td>32.0832（km/h）</td></tr>
+                        </tbody>
+                    </table>
+                </div></div>
+                <div style="height:60px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                        <!-- <div style="height:100%;width:45%;background:#60B4EF;padding:20px;text-indent:25px;top:0;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px;display: inline-block;"> -->
+                            由曲线可知，在样本中的六个路段中，市心北路相对来说最为畅通，而市心南路相对通行最为缓慢；横向比较，可知周末比工作日稍微畅通一些。
+                        </div>
+            </div>
+            <div class="div_any_child01 left">
+                <div class="div_any_title">各路段每天的交通流量</div>
+                <div id="echart2"  style="width: 100%;height: 310px;display: inline-block;"></div>
+                <div class="char_table"><div class="table_p table_p01">
+                    <table>
+                        <thead><tr>
+                            <th>排名</th>
+                            <th>路段名称</th>
+                            <th>平均车流量（辆）</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>1</td><td>市心中路</td><td>32197</td></tr>
+                        <tr><td>2</td><td>市心北路</td><td>17866</td></tr>
+                        <tr><td>3</td><td>通惠南路</td><td>17625</td></tr>
+                        <tr><td>4</td><td>市心南路</td><td>17430</td></tr>
+                        <tr><td>5</td><td>通惠北路</td><td>13349</td></tr>
+                        <tr><td>6</td><td>通惠中路</td><td>11739</td></tr>
+                        </tbody>
+                    </table>
+                </div></div>
+                <div style="height:60px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                        由曲线可知，各样本路段中市心中路的日交通流量最大，而通惠中路的交通流量最小；横向比较，可以发现周末的交通流量相对来说要小于工作日的交通流量。
+                </div>
+            </div>
+        </div>
+
+        <div class="static_top left">
+            <i></i><span>统计分析二</span>
+        </div>
+        <div class="right div_any03">
+            <div class="div_any_child01 left">
+                <div class="div_any_title">各路段各小时的平均速度</div>
+                <div id="echart3"  style="width: 100%;height: 310px;display: inline-block;"></div>
+                <div style="height:60px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                        <!-- <div style="height:100%;width:45%;background:#60B4EF;padding:20px;text-indent:25px;top:0;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px;display: inline-block;"> -->
+                            由曲线可知，纵向比较，在同一时间段内市心北路稍比其他路段通畅，市心南路稍显拥挤。横向比较，第6小时到第9小时各路段速度显著下降，可知是上班早高峰时间；第16小时到第18小时各路段速度显著下降，可知是下班早高峰时间。
+                        </div>
+            </div>
+            <div class="div_any_child01 left">
+                <div class="div_any_title">各路段各小时内的平均交通流量指标</div>
+                <div id="echart4"  style="width: 100%;height: 310px;display: inline-block;"></div>
+                <div style="height:60px;width:80%;background:#60B4EF;padding:20px;text-indent:25px;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px">
+                        <!-- <div style="height:100%;width:45%;background:#60B4EF;padding:20px;text-indent:25px;top:0;color:#fafafa;border-radius: 10px;font-size:18px;margin: auto;margin-top:20px;display: inline-block;"> -->
+                           由曲线可知，纵向比较，在同一时间段内市心中路交通流量相对较大，市心南路交通流量相对较小。横向比较，第6小时到第9小时交通流量显著上升，可知是上班早高峰时间。
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交通大数据可视化平台</title>
+    <meta name="keywords" content="交通大数据可视化平台" />
+    <meta name="description" content="交通大数据可视化平台" /> 
+    <meta name="author" content="应旺君" />
+    <meta name="copyright" content="ywj" />
+    <link href="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/styles/common.css" rel="stylesheet">
+    <script src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/scripts/Plugin/jquery-3.3.1.min.js"></script>
+    <script src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/scripts/Plugin/echarts.min.js"></script>
+    <script src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/scripts/Plugin/bmap.min.js"></script>
+    <script src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/scripts/common.js"></script>
+    <script src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/scripts/日期/index7月17.js"></script>
+    <script src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/scripts/Plugin/laydate/laydate.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.13&key=	a6e68cfc96b877d104b9a99d13c2c365"></script>
+    <link rel="stylesheet"href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css"/>
+</head>
+<body>
+<!--顶部-->
+<header class="header left">
+    <div class="left nav">
+        <ul>
+            <li class="nav_active"><i class="nav_1"></i><a href="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月17.html">采集概况</a> </li>
+            <li><i class="nav_2"></i><a href="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/指标分析/市心路/市心北路_quota.html">指标分析</a> </li> 
+            <li><i class="nav_3"></i><a href="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/trend.html">趋势分析</a> </li>
+            </ul>
+    </div>
+    <div class="header_center left" style="position:relative">
+        
+        <h2><strong>交通大数据可视化平台</strong></h2>
+
+    </div>
+    <div class="right nav text_right">
+        <ul>
+
+        </ul>
+    </div>
+
+</header>
+<!--内容部分-->
+<div class="con left">
+    <!--数据总概-->
+    <div class="con_div">
+        <div class="con_div_text left">
+            <div class="con_div_text01 left">
+                <!-- <img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/info_1.png" class="left text01_img"/> -->
+                <div class="left text01_div">
+                    <p>监测时间</p>
+                    <p>0:00-23:59</p>
+                </div>
+            </div>
+            <div class="con_div_text01 right">
+                <!-- <img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/info_2.png" class="left text01_img"/> -->
+                <div class="left text01_div">
+                    <p>星期</p>
+                    <p>周一</p>
+                </div>
+            </div>
+        </div>
+        <div class="con_div_text left">
+            <div class="con_div_text01 left">
+                <!-- <img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/info_3.png" class="left text01_img"/> -->
+                <div class="left text01_div">
+                    <p>车流量路段排名</p>
+                    <select onchange="window.location=this.value;" style="width:150px;height:50px;font-size:24px;background:none;color:#25f3e6;">        <!--下拉列表框-->
+						<option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/1/index1_7月17.html">1</option>
+						<option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/2/index2_7月17.html" >2</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月17.html"selected="selected" >3</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/4/index4_7月17.html">4</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/5/index5_7月17.html">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="con_div_text01 right">
+                <!-- <img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/info_4.png" class="left text01_img"/> -->
+                <div class="left text01_div">
+                    <p>日期</p>
+                    <select onchange="window.location=this.value;" style="width:220px;height:50px;font-size:24px;background:none;color:#25f3e6;">        <!--下拉列表框-->
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月17.html" selected="selected">2017/7/17</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月18.html">2017/7/18</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月19.html" >2017/7/19</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月20.html" >2017/7/20</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月21.html" >2017/7/21</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月22.html" >2017/7/22</option>
+                        <option value="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/采集状况/3/index3_7月23.html" >2017/7/23</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="con_div_text left">
+
+            <div class="con_div_text01 left">
+                <!-- <img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/info_5.png" class="left text01_img"/> -->
+                <div class="left text01_div">
+                    <p>监测数据总数(辆)</p>
+                    <p class="org">2586266</p>
+                </div>
+            </div>
+            <div class="con_div_text01 right">
+                <!-- <img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/info_6.png" class="left text01_img"/> -->
+                <div class="left text01_div">
+                    <p>未识别车牌车辆(辆)</p>
+                    <p class="org">412148</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--统计分析图-->
+    <div class="div_any">
+        <div class="left div_any01">
+            <div class="div_any_child">
+                <div class="div_any_title">各类型车辆采集数据量</div>
+                <div id="pieChart1" style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%"></div>
+            </div>
+            <div class="div_any_child">
+                    <div class="div_any_title">车辆出现次数前5位 </div>
+                    <div class="table_p">
+                        <table>
+                            <thead><tr>
+                                <th>排名</th>
+                                <th>车牌号</th>
+                                <th>次数（次）</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>浙AP1222</td><td>1980</td></tr>
+                                <tr><td>2</td><td>浙AP6222</td><td>1871</td></tr>
+                                <tr><td>3</td><td>浙A11110</td><td>1165</td></tr>
+                                <tr><td>4</td><td>浙A11111</td><td>1161</td></tr>
+                                <tr><td>5</td><td>浙AP7222</td><td>1121</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+      
+      
+      
+        <div class="div_any02 left ">
+            <div class="div_any_child div_height">
+                    <div class="div_any_title any_title_width">实时路况图 </div>
+                    <div id="container"style="width:97.5%;height:95%;margin:0 auto;top: 2.5%"></div>
+                 <script>
+                        var map = new AMap.Map('container', {
+                            resizeEnable: true,
+                            center: [120.269081,30.205579],
+                            zoom: 15
+                        });                    
+                        //实时路况图层
+                        var trafficLayer = new AMap.TileLayer.Traffic({
+                            zIndex: 10
+                        });                   
+                        //trafficLayer.setMap(map);   
+                        var marker =new AMap.Marker({
+                            position:new AMap.LngLat(120.269081,30.205579),
+                            //title:'北京'
+                        })  
+                        marker.setLabel({
+                            offset: new AMap.Pixel(20, 20),  //设置文本标注偏移量
+                            content: "<div class='info'>市心北路-建设四路南向北1</div>", //设置文本标注内容
+                            direction: 'right' //设置文本标注方位
+                        });
+                        map.add(marker);
+                        trafficLayer.setMap(map);  
+              </script>
+                          
+            </div>
+        </div>
+        <div class="right div_any01">
+            <div class="div_any_child">
+                <!-- <div class="div_any_title"><img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/title_3.png">同向同车道两辆车的时间差</div> -->
+                <!-- <div id="histogramChart" style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%"></div> --> -->
+                <!-- <p id="lineChart" class="p_chart"></p> -->
+                <div class="div_any_title">各时段数据采集条数</div>
+                <div id="lineChart" style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%"></div>
+                <!-- <p id="histogramChart" class="p_chart"></p> -->
+            </div>
+            <div class="div_any_child">
+                <!-- <div class="div_any_title"><img src="D:/jsproject/毕设交通大数据平台2/交通大数据可视化平台/images/title_4.png">某车进入与离开监控区的时间差</div>
+                <div id="lineChart2" style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%"></div> -->
+                <div class="div_any_title">各路段采集车辆数前5位 </div>
+                <div class="table_p">
+                    <table>
+                        <thead><tr>
+                            <th>排名</th>
+                            <th>路段</th>
+                            <th>检测数量（次）</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>市心北路-建设四路东口实线变道2</td><td>61766</td></tr>
+                            <tr><td>2</td><td>市心路-山阴路实线变道南向北1</td><td>31233</td></tr>
+                            <tr><td>3</td><td>市心北路-建设四路南向北1</td><td>21417</td></tr>
+                            <tr><td>4</td><td>市心路-金城路东向西2</td><td>21331</td></tr>
+                            <tr><td>5</td><td>市心路-振宁路南向北1</td><td>19686</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
